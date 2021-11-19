@@ -1,0 +1,27 @@
+html 
+    head 
+        title Demo MongoDB CRUD
+    body 
+        h2 Ubah Data 
+
+        form(action = "/edit", method = "POST")
+            div 
+                lable Kode 
+            div 
+                input(type=text, name="buku_id", size="10",value=book['kode'],readonly="true")
+            div 
+                label Judul 
+            div 
+                input(type="text", name="judul_buku",size="30",value=book['judul'])
+            div
+                label(for="") Penulis 
+            div 
+                input(type="text", name="penulis_buku",size="20",value=book['penulis'])
+            div 
+                label Penerbit 
+            div
+                input(type="text", name="penerbit_buku",size="25",value=book['penerbit'])
+            div(style="margin-top: 10px;")
+                 input(type="submit",value="Perbarui")
+                 input(type="button", value="Batal",
+                 onClick="javascript:history.go(-1);")

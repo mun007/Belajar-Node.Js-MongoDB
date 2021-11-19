@@ -1,0 +1,27 @@
+
+html 
+    head 
+        title Demo MongoDB CRUD 
+    body 
+        h2 Demo CRUD - Node.js dan MongoDB 
+
+        table(border="1")        
+            tr 
+                th(width="90") ID 
+                th(width="200") Judul 
+                th(width="180") Penulis
+                th(width="160") Penerbit 
+                th(width="110") Ubah Data 
+                th(width="110") Hapus Data  
+                each book in books  
+                    tr
+                        td= book.kode
+                        td= book.judul
+                        td= book.penulis
+                        td= book.penerbit
+                        td
+                            a(href="/edit?id="+book.kode) Ubah 
+                        td 
+                            a(href="/hapus?id="+book.kode) Hapus
+    p 
+    a(href="/add")  Tambah Data

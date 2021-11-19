@@ -1,0 +1,27 @@
+html 
+    head 
+        title Demo MongoDB CRUD 
+    body 
+        h2 Tambah data
+        
+        form(action ="/add", method ="post")
+            div 
+                label(for="buku_id") Kode
+            div 
+                input(type="text",name="buku_id",size="10")
+            div 
+                label Judul 
+            div 
+                input(type="text",name="judul_buku",size="30")
+            div 
+                label Penulis
+            div 
+                input(type="text", name="penulis_buku",size="20")
+            div 
+                label Penerbit 
+            div 
+                input(type="text",name="penerbit_buku",size="25")
+            div(style="margin-top:10px;")
+                input(type="submit",value="Simpan")
+                input(type="button",value="Batal",
+                onClick="javascript:history.go(-1);")
